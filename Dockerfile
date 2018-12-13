@@ -57,6 +57,8 @@ RUN wget https://github.com/uNetworking/uWebSockets/archive/v0.14.8.tar.gz \
 	&& rm -rf uWebSockets-0.14.8 \
 	&& rm -f v0.14.8.tar.gz
 
+RUN echo "/usr/local/lib" >> /etc/ld.so.conf.d/local_lib.conf && ldconfig
+
 WORKDIR /home
 
 EXPOSE 22 2000 4445 6500 6501 6502 6503 6504
