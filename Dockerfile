@@ -61,4 +61,4 @@ WORKDIR /home
 
 EXPOSE 22 2000 4445 6500 6501 6502 6503 6504
 
-CMD ["/usr/sbin/sshd", "-p 5252" "-D"]
+CMD ["/usr/sbin/sshd", "-D"]
