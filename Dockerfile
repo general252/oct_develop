@@ -4,22 +4,18 @@ FROM centos:7
 
 RUN cd /home \
     && echo root:"123456" | chpasswd \
-    && \
     && yum install -y openssh-server \
     && ssh-keygen -q -t rsa -b 2048 -f /etc/ssh/ssh_host_rsa_key -N '' \
     && ssh-keygen -q -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key -N '' \
     && ssh-keygen -t dsa -f /etc/ssh/ssh_host_ed25519_key -N '' \
-    && \
     && yum -y install gcc \
     && yum -y install gcc-c++ \
     && yum -y install gdb-gdbserver \
     && yum -y groupinstall development \
-    && \
     && yum -y install zlib-devel zlib \
     && yum -y install openssl openssl-devel \
     && yum -y install wget \
     && yum -y install autoconf automake libtool \
-    && \
     && yum clean all \
     && rm -rf /var/cache/yum
 
