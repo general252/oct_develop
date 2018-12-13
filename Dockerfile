@@ -59,6 +59,6 @@ RUN wget https://github.com/uNetworking/uWebSockets/archive/v0.14.8.tar.gz \
 
 WORKDIR /home
 
-EXPOSE 22 2000
+EXPOSE 22 2000 6500 6501 6502 6503 6504
 
 CMD ["/usr/sbin/sshd", "-D"]
