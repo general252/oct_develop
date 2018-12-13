@@ -2,8 +2,6 @@
 
 FROM centos:7
 
-MAINTAINER MNicholas "chuanlin252@163.com"
-
 RUN cd /home \
     && echo root:"123456" | chpasswd \
     && yum install -y openssh-server \
