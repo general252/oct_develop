@@ -48,7 +48,7 @@ RUN wget https://github.com/libuv/libuv/archive/v1.23.2.tar.gz \
 	&& yum clean all \
 	&& rm -rf /var/cache/yum
 
-RUN wget wget https://github.com/uNetworking/uWebSockets/archive/v0.14.8.tar.gz \
+RUN wget https://github.com/uNetworking/uWebSockets/archive/v0.14.8.tar.gz \
 	&& tar zxf v0.14.8.tar.gz \
 	&& cd uWebSockets-0.14.8 \
 	&& make \
