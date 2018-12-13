@@ -43,7 +43,7 @@ RUN wget https://github.com/libuv/libuv/archive/v1.23.2.tar.gz \
 	&& make install \
 	&& cd .. \
 	&& rm -rf libzmq-4.2.5 \
-	&& rm -f libzmq-4.2.5 \
+	&& rm -f v4.2.5.tar.gz \
 	\
 	&& openssl genrsa -out server_key.pem 2048 \
 	&& openssl req -new -x509 -key key.pem -out server_cert.pem -days 36500 \
