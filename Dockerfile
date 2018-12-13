@@ -29,7 +29,6 @@ RUN wget https://github.com/libuv/libuv/archive/v1.23.2.tar.gz \
 	&& sh autogen.sh \
 	&& ./configure \
 	&& make -j4 \
-	&& make check \
 	&& make install \
 	&& cd .. \
 	&& rm -rf libuv-1.23.2 \
