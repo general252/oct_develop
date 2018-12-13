@@ -45,9 +45,6 @@ RUN wget https://github.com/libuv/libuv/archive/v1.23.2.tar.gz \
 	&& rm -rf libzmq-4.2.5 \
 	&& rm -f v4.2.5.tar.gz \
 	\
-	&& openssl genrsa -out server_key.pem 2048 \
-	&& openssl req -new -x509 -key key.pem -out server_cert.pem -days 36500 \
-	\
 	&& yum clean all \
 	&& rm -rf /var/cache/yum
 
