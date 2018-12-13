@@ -48,6 +48,15 @@ RUN wget https://github.com/libuv/libuv/archive/v1.23.2.tar.gz \
 	&& yum clean all \
 	&& rm -rf /var/cache/yum
 
+RUN wget wget https://github.com/uNetworking/uWebSockets/archive/v0.14.8.tar.gz \
+	&& tar zxf v0.14.8.tar.gz \
+	&& cd uWebSockets-0.14.8 \
+	&& make \
+	&& make install \
+	&& cd .. \
+	&& rm -rf uWebSockets-0.14.8 \
+	&& rm -f v0.14.8.tar.gz
+
 WORKDIR /home
 
 EXPOSE 22 2000
