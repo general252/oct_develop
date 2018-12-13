@@ -20,7 +20,10 @@ RUN cd /home \
     && yum -y install wget \
     && yum -y install autoconf automake libtool \
     && \
-    && wget https://github.com/libuv/libuv/archive/v1.23.2.tar.gz \
+    && yum clean all \
+    && rm -rf /var/cache/yum
+
+RUN wget https://github.com/libuv/libuv/archive/v1.23.2.tar.gz \
     && tar zxf v1.23.2.tar.gz \
     && cd libuv-1.23.2 \
     && sh autogen.sh \
